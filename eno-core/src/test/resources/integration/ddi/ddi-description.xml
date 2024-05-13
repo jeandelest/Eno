@@ -35,7 +35,7 @@
             <r:ID>lw4o9iui</r:ID>
             <r:Version>1</r:Version>
             <d:InstructionName>
-               <r:String xml:lang="fr-FR">help</r:String>
+               <r:String xml:lang="fr-FR">description</r:String>
             </d:InstructionName>
             <d:InstructionName>
                <r:String xml:lang="fr-FR">SelfAdministeredQuestionnaire.WebBased</r:String>

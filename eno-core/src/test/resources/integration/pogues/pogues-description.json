@@ -107,10 +107,9 @@
           ],
           "Declaration": [
             {
-              "declarationType": "HELP",
+              "declarationType": "DESCRIPTION",
               "Text": "\"Question description.\"",
               "id": "lw4o9iui",
-              "position": "AFTER_QUESTION_TEXT",
               "DeclarationMode": [
                 "CAPI",
                 "CATI",
