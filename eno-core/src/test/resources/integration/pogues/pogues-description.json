@@ -1,0 +1,150 @@
+{
+  "owner": "ENO-INTEGRATION-TESTS",
+  "FlowControl": [],
+  "ComponentGroup": [
+    {
+      "MemberReference": [
+        "idendquest",
+        "lw4nru05",
+        "lw4ob2mk"
+      ],
+      "Label": [
+        "Components for page 1"
+      ],
+      "id": "lw4nsy02",
+      "Name": "PAGE_1"
+    }
+  ],
+  "agency": "fr.insee",
+  "genericName": "QUESTIONNAIRE",
+  "Label": [
+    "Eno - Description"
+  ],
+  "childQuestionnaireRef": [],
+  "Name": "ENO_DESCRIPTION",
+  "Variables": {
+    "Variable": [
+      {
+        "Label": "QUESTION label",
+        "id": "lw4o07tm",
+        "type": "CollectedVariableType",
+        "Name": "QUESTION",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 249
+        }
+      }
+    ]
+  },
+  "lastUpdatedDate": "Mon May 13 2024 09:43:18 GMT+0200 (heure d’été d’Europe centrale)",
+  "DataCollection": [
+    {
+      "id": "esa-dc-2018",
+      "uri": "http://ddi:fr.insee:DataCollection.esa-dc-2018",
+      "Name": "Enquête sectorielle annuelle 2018"
+    }
+  ],
+  "final": false,
+  "flowLogic": "FILTER",
+  "id": "lw4nr1lv",
+  "TargetMode": [
+    "CAPI",
+    "CATI",
+    "CAWI",
+    "PAPI"
+  ],
+  "CodeLists": {
+    "CodeList": []
+  },
+  "formulasLanguage": "VTL",
+  "Child": [
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "\"Sequence\""
+      ],
+      "id": "lw4nru05",
+      "TargetMode": [
+        "CAPI",
+        "CATI",
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "lw4o07tm",
+              "id": "lw4oairp",
+              "mandatory": false,
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": 249
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "\"Question\""
+          ],
+          "id": "lw4ob2mk",
+          "TargetMode": [
+            "CAPI",
+            "CATI",
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [
+            {
+              "declarationType": "HELP",
+              "Text": "\"Question description.\"",
+              "id": "lw4o9iui",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAPI",
+                "CATI",
+                "CAWI",
+                "PAPI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "QUESTION"
+        }
+      ],
+      "Name": "SEQUENCE"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "QUESTIONNAIRE_END"
+      ],
+      "id": "idendquest",
+      "TargetMode": [
+        "CAPI",
+        "CATI",
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [],
+      "Name": "QUESTIONNAIRE_END"
+    }
+  ]
+}
